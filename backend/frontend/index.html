@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Chest X-Ray Analyzer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Floating Background X-Ray Elements -->
+    <div class="bg-xray xray-1"></div>
+    <div class="bg-xray xray-2"></div>
+    <div class="bg-xray xray-3"></div>
+    <div class="bg-xray xray-4"></div>
+
+    <!-- Hero Title Section -->
+    <header class="hero-section">
+        <div class="hero-text-wrapper">
+            <h1 class="wobbly-title">Chest X-Ray AI Model</h1>
+            <p class="hero-subtext">Pneumonia Detection System</p>
+            
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="arrow">↓</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Workspace Section -->
+    <main class="main-container">
+        <div class="glass-card">
+            <h2>Upload & Analyze</h2>
+            <p class="subtitle">Drop your X-Ray image file below for analysis</p>
+
+            <!-- Dropzone -->
+            <div class="dropzone" id="dropzone">
+                <input type="file" id="fileInput" accept="image/*" hidden>
+                <div class="icon">⚡</div>
+                <p><strong>Drag & Drop your X-Ray here</strong></p>
+                <p class="small">or click to browse from device</p>
+            </div>
+
+            <!-- Preview Area -->
+            <div id="previewArea" class="preview-area hidden">
+                <img id="imagePreview" src="" alt="Selected X-Ray">
+                <button id="analyzeBtn" class="btn">Analyze X-Ray</button>
+            </div>
+
+            <!-- Result Card -->
+            <div id="resultCard" class="result-card hidden">
+                <h3 id="resultTitle"></h3>
+                <p id="confidenceText"></p>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
